@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Signup</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f0f2f5;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.signup-box{
+background:white;
+padding:30px;
+width:320px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#007bff;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+.login-link{
+text-align:center;
+margin-top:10px;
+font-size:14px;
+}
+
+.error{
+color:red;
+font-size:13px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="signup-box">
+
+<h2>Daftar Akun</h2>
+
+<form id="signupForm">
+
+<input type="text" id="name" placeholder="Nama Lengkap" required>
+
+<input type="email" id="email" placeholder="Email" required>
+
+<input type="password" id="password" placeholder="Password" required>
+
+<input type="password" id="confirmPassword" placeholder="Konfirmasi Password" required>
+
+<p class="error" id="error"></p>
+
+<button type="submit">Sign Up</button>
+
+</form>
+
+<div class="login-link">
+Sudah punya akun? <a href="#">Login</a>
+</div>
+
+</div>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let password = document.getElementById("password").value;
+let confirmPassword = document.getElementById("confirmPassword").value;
+let error = document.getElementById("error");
+
+if(password !== confirmPassword){
+error.textContent = "Password tidak sama!";
+return;
+}
+
+error.textContent = "";
+alert("Pendaftaran berhasil!");
+
+});
+</script>
+
+</body>
+</html>

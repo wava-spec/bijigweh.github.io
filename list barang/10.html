@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokopedia Style List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Container Utama */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* Card Barang */
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Pengaturan Gambar agar Pas dengan Kotak */
+        .image-container {
+            width: 100%;
+            height: 200px; /* Tinggi kotak gambar */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* KUNCI: Gambar akan memenuhi kotak secara proporsional */
+            display: block;
+        }
+
+        .info {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .title {
+            font-size: 14px;
+            height: 38px;
+            line-height: 19px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Maksimal 2 baris teks */
+            -webkit-box-orient: vertical;
+            color: #212121;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 16px;
+            color: #fa591d;
+            margin: 4px 0;
+        }
+
+        .location {
+            font-size: 12px;
+            color: #6d7588;
+            display: flex;
+            align-items: center;
+        }
+
+        .rating {
+            font-size: 11px;
+            color: #6d7588;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-grid">
+    <div class="card">
+        <div class="image-container">
+            <img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/hops/2020/03/red-brassiere-on-white-textile-3682271.jpg" alt="Keyboard">
+        </div>
+        <div class="info">
+            <div class="title">Keyboard Mechanical RGB Wireless Hot-swappable Red Switch</div>
+            <div class="price">Rp750.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.9 | Terjual 1rb+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="data:image/webp;base64,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" alt="Mouse">
+        </div>
+        <div class="info">
+            <div class="title">Mouse Gaming Lightweight 56g Sensor PMW3395 Black Edition</div>
+            <div class="price">Rp450.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.8 | Terjual 500+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=500" alt="Monitor">
+        </div>
+        <div class="info">
+            <div class="title">Monitor LED 24 Inch IPS 144Hz Bezel-less Ultra Slim</div>
+            <div class="price">Rp1.850.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 5.0 | Terjual 100+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=500" alt="Headset">
+        </div>
+        <div class="info">
+            <div class="title">Headset Gaming 7.1 Surround Sound Noise Cancelling PRO</div>
+            <div class="price">Rp320.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.7 | Terjual 2rb+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://down-ph.img.susercontent.com/file/cn-11134207-7r98o-lla4i28bhcbwf4" alt="Deskmat">
+        </div>
+        <div class="info">
+            <div class="title">Deskmat XL 900x400mm Minimalist Clean Design Anti-Slip</div>
+            <div class="price">Rp125.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.9 | Terjual 4rb+</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

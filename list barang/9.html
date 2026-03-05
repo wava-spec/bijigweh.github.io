@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokopedia Style List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Container Utama */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* Card Barang */
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Pengaturan Gambar agar Pas dengan Kotak */
+        .image-container {
+            width: 100%;
+            height: 200px; /* Tinggi kotak gambar */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* KUNCI: Gambar akan memenuhi kotak secara proporsional */
+            display: block;
+        }
+
+        .info {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .title {
+            font-size: 14px;
+            height: 38px;
+            line-height: 19px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Maksimal 2 baris teks */
+            -webkit-box-orient: vertical;
+            color: #212121;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 16px;
+            color: #fa591d;
+            margin: 4px 0;
+        }
+
+        .location {
+            font-size: 12px;
+            color: #6d7588;
+            display: flex;
+            align-items: center;
+        }
+
+        .rating {
+            font-size: 11px;
+            color: #6d7588;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-grid">
+    <div class="card">
+        <div class="image-container">
+            <img src="https://www.digitaltrends.com/wp-content/uploads/2024/05/acer-swift-x-14-2024-front-angled-e1715278668968.jpg?fit=720%2C480&p=1" alt="Keyboard">
+        </div>
+        <div class="info">
+            <div class="title">Asus Zenbox</div>
+            <div class="price">Rp13.750.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.9 | Terjual 1rb+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://b2c-contenthub.com/wp-content/uploads/2023/07/Acer_Aspire3.jpg?quality=50&strip=all" alt="Mouse">
+        </div>
+        <div class="info">
+            <div class="title">Asus Zenbox 14</div>
+            <div class="price">Rp13.450.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.8 | Terjual 500+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://biznakenya.com/wp-content/uploads/2023/09/2023-Strix-G1618_CCF_BillboardH_-01-scaled.jpg" alt="Monitor">
+        </div>
+        <div class="info">
+            <div class="title">Laptop Asus ROG Strix G16</div>
+            <div class="price">Rp19.999.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 5.0 | Terjual 100+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://m.media-amazon.com/images/I/91+1oCZAfeL.jpg" alt="Headset">
+        </div>
+        <div class="info">
+            <div class="title">TopMate11 CollingPad RGB NoteBook</div>
+            <div class="price">Rp6.320.000</div>
+            <div class="location">Bergas</div>
+            <div class="rating">⭐ 4.7 | Terjual 2rb+</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="image-container">
+            <img src="https://pemmzchannel.com/wp-content/uploads/2023/07/4-5.jpg" alt="Deskmat">
+        </div>
+        <div class="info">
+            <div class="title">Portable External Hard Drive</div>
+            <div class="price">Rp2.125.000</div>
+            <div class="location">bergas</div>
+            <div class="rating">⭐ 4.9 | Terjual 4rb+</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

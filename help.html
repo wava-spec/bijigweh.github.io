@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Help / Bantuan</title>
+
+<style>
+body{
+font-family: Arial, sans-serif;
+background:#f5f5f5;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:800px;
+margin:50px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+color:#333;
+}
+
+.faq{
+margin-top:20px;
+}
+
+.question{
+background:#007bff;
+color:white;
+padding:15px;
+cursor:pointer;
+border-radius:5px;
+margin-top:10px;
+}
+
+.answer{
+display:none;
+padding:15px;
+background:#f1f1f1;
+border-radius:5px;
+}
+
+.contact{
+margin-top:30px;
+text-align:center;
+}
+
+button{
+background:#28a745;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Pusat Bantuan</h1>
+<p>Temukan jawaban dari pertanyaan yang sering diajukan.</p>
+
+<div class="faq">
+
+<div class="question">Bagaimana cara membuat akun?</div>
+<div class="answer">Klik tombol daftar di halaman utama lalu isi data yang diminta.</div>
+
+<div class="question">Bagaimana cara login?</div>
+<div class="answer">Masukkan email dan password pada halaman login.</div>
+
+<div class="question">Saya lupa password, apa yang harus dilakukan?</div>
+<div class="answer">Klik "Lupa Password" di halaman login dan ikuti petunjuknya.</div>
+
+<div class="question">Bagaimana cara menghubungi admin?</div>
+<div class="answer">Anda bisa menghubungi kami melalui email support@website.com</div>
+
+</div>
+
+<div class="contact">
+<p>Masih butuh bantuan?</p>
+<button onclick="alert('Silakan hubungi support@website.com')">Hubungi Support</button>
+</div>
+
+</div>
+
+<script>
+let questions = document.querySelectorAll(".question");
+
+questions.forEach(q => {
+q.addEventListener("click", () => {
+let answer = q.nextElementSibling;
+
+if(answer.style.display === "block"){
+answer.style.display = "none";
+}else{
+answer.style.display = "block";
+}
+});
+});
+</script>
+
+</body>
+</html>
